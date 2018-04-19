@@ -812,7 +812,9 @@ void CGameControllerCSTT::Tick()
 		if (!pPlayer->m_Welcomed && !pPlayer->m_IsBot)
 		{
 			GameServer()->SendBroadcast("Welcome to Counter-Strike: Tee Time.", pPlayer->GetCID(), true);
-	                GameServer()->SendBroadcast("欢迎来到2D版CS。这是TeeWorlds的一个mods。玩法我也不是很懂。总之打倒敌人能拿到新武器，可以用鼠标滚轮切换。各方要保障自己的棋子不在一个回合的时间内不被敌人占领，否则就Game Over。", pPlayer->GetCID(), true);
+			GameServer()->SendBroadcast("欢迎来到2D版CS。这是TeeWorlds的一个mods。", pPlayer->GetCID(), true);
+			GameServer()->SendBroadcast("通过发起投票（消耗自己的金钱）或者打倒敌人能拿到新武器，可以用鼠标滚轮切换。", pPlayer->GetCID(), true);
+			GameServer()->SendBroadcast("各方要保障自己的棋子不在一个回合的时间内不被敌人占领，否则就Game Over。", pPlayer->GetCID(), true);
 			pPlayer->m_Welcomed = true;
 		}
 	}
