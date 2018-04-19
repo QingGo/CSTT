@@ -814,7 +814,9 @@ void CGameControllerCSTT::Tick()
 			GameServer()->SendBroadcast("Welcome to Counter-Strike: Tee Time.", pPlayer->GetCID(), true);
 			GameServer()->SendBroadcast("欢迎来到2D版CS。这是TeeWorlds的一个mods。", pPlayer->GetCID(), true);
 			GameServer()->SendBroadcast("通过发起投票（消耗自己的金钱）或者打倒敌人能拿到新武器，可以用鼠标滚轮切换。", pPlayer->GetCID(), true);
-			GameServer()->SendBroadcast("各方要保障自己的棋子不在一个回合的时间内不被敌人占领，否则就Game Over。", pPlayer->GetCID(), true);
+			GameServer()->SendBroadcast("红队是恐怖分子，红旗是炸弹。蓝队是反恐队员，蓝旗是基地。", pPlayer->GetCID(), true);
+			GameServer()->SendBroadcast("若红队把炸弹放置到蓝队的基地并引爆，则红队胜。", pPlayer->GetCID(), true);
+			GameServer()->SendBroadcast("若蓝队夺走炸弹，或坚持到回合结束，则蓝队胜。", pPlayer->GetCID(), true);
 			pPlayer->m_Welcomed = true;
 		}
 	}
